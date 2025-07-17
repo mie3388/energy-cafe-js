@@ -135,7 +135,6 @@ img {
     border-radius: 5px;
     padding: 6px 100px;
     position: sticky;
-    bottom: 55px;
 
  /* position: absolute;
     top:70%;
@@ -148,6 +147,10 @@ img {
 
 .button:hover {
     background:#ffe554;
+}
+
+#menu_btn {
+    bottom: 55px;
 }
 
 /* iframe */
@@ -697,10 +700,6 @@ footer p {
         height: 6rem;
     }
     
-    #submit_btn {
-        bottom: 10px;
-    }
-
 
     /* 店舗情報・地図 / SNS */
     #location .wrapper,
