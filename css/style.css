@@ -4,12 +4,18 @@
 ------------------------------- */
 html {
     font-size: 100%;
+  
+
 }
+
 body{
     font-family:  "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", sans-serif;
     line-height: 1.7;
     color: rgb(32, 25, 17);
+ 
+
 }
+
 a {
     text-decoration: none;
 }
@@ -31,7 +37,12 @@ img {
     background-position: center top;  
     width: 100vw;      
 }                                      
-                                                     
+
+.slider-wrapper {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
 
 .slick01 {
     padding-top: 60px;
@@ -40,14 +51,16 @@ img {
     visibility: hidden;
     width: 100vw;  
     min-height: 100vh; 
-    position: absolute;
+    position: relative;
     top: 0;
-    z-index: -1;    
+    z-index: 1;    
 }  
 
 .slick01 img {
     width:  100vw;
-}
+    height: 100vh;
+    object-fit: cover;
+ }
 
 .slick01.slick-initialized {
     visibility:  visible;
@@ -55,16 +68,16 @@ img {
 
 .slick-next{
     right:20px;
-    z-index: 1;
+    z-index: 20;
 }
 
 .slick-prev{
     left:20px;
-    z-index: 1;
+    z-index: 20;
 }
 
 .slick-dots li button:before{
-   height: -20px;
+   height: 20px;
 }
 
 .slick-dots{
@@ -79,6 +92,7 @@ img {
  .slick-slide div{
     height: 100vh;
 }  
+ 
 
 
 /* .slick-dotted.slick-slider {
@@ -98,13 +112,32 @@ img {
     font-family: "Caveat", cursive;
     font-optical-sizing: auto;
     font-weight: 600;
-    margin: 0 auto;
     font-style:  normal;
     text-shadow: 4px 4px 5px #ffffff; 
-    color:#403830;
+    color:#403830; 
+   
 /*  position: absolute;
     top:30%;
     margin:  0 auto;   */ 
+}
+
+
+#home-title{
+    font-size: 5rem;
+    line-height: 1.1;
+    font-family: "Caveat", cursive;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style:  normal;
+    text-shadow: 4px 4px 5px #ffffff; 
+    color:#403830;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 5;
+    text-align: center;
+
 }
 
 
@@ -113,8 +146,16 @@ img {
     font-optical-sizing: auto;
     font-weight: 500;
     font-style: normal;
+    color: #403830;
     text-shadow: 1px 1px 1px #ffffff;
-    color:  rgb(32, 25, 17);
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 5;
+    text-align: center;
+    
+/*    color:  rgb(32, 25, 17);  */
 /*  position: absolute;
     top:50%;
     margin:  0 auto;    */ 
@@ -134,7 +175,6 @@ img {
     color: rgb(97, 88, 78);
     border-radius: 5px;
     padding: 6px 100px;
-    position: sticky;
 
  /* position: absolute;
     top:70%;
@@ -145,12 +185,21 @@ img {
     margin:  0 auto;             */
 }
 
-.button:hover {
-    background:#ffe554;
+#menu_btn {
+    font-size: 1.375rem;
+    background: #ffd711;
+    color: rgb(97, 88, 78);
+    border-radius: 5px;
+    padding: 3px 100px;
+    bottom: 50px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    z-index: 5;
+    text-align: center;
 }
 
-#menu_btn {
-    bottom: 55px;
+.button:hover {
+    background:#ffe554;
 }
 
 /* iframe */
@@ -206,6 +255,7 @@ iframe {
   cursor: pointer;
   padding-top: 15px;
   padding-right: 10px;
+  z-index: 30;
 }
 
 .burger div {
@@ -214,6 +264,7 @@ iframe {
   background-color: #432;
   margin: 6px;
   transition: 0.5s ease;
+  z-index: 30;
 }
 
 
@@ -446,7 +497,7 @@ textarea {
 #submit_btn {
     border: none;
     cursor: pointer;
-    line-height: 1;   
+    line-height: 1; 
 }
 
 /* 店舗情報・地図 */
@@ -593,7 +644,7 @@ footer p {
      height: 100vh;
      top: 0;
      right: 0;
-     z-index: 1;
+     z-index: 9;
      background: rgba(0,0,0,0.55);
      transition: ease .4s;
     }
@@ -619,17 +670,33 @@ footer p {
 
  
     .page-title {
-        font-size: 4.2rem;
+        font-size: 2.5rem;
     }
 
 
-    /* HOME */	
+     /* HOME */
+
+    #home-title{
+    font-size: 4.5rem;
+    top: 40%;
+   }
+
+
     .home-content p {
-        font-size: 1.2rem;
+        width: 85%;
+        padding: 0 4% ;
+        box-sizing: border-box;
+        font-size: 23px;
+        top: 70%;
     }
    
     .home-content {
         margin-top: 40%;
+    }
+
+    #menu_btn {
+        width: 75%;
+        padding: 3px 50px;
     }
 
 
@@ -700,6 +767,8 @@ footer p {
         height: 6rem;
     }
     
+
+
 
     /* 店舗情報・地図 / SNS */
     #location .wrapper,
